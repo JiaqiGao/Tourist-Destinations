@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<title> Top Tourist Spots </title>
+<style>
+body {
+background-image:url('Fondo-Central-Park-Aire.jpg');
+background-size: 100%;
+background-repeat: repeat-y;
+    margin: 0;
+    padding: 0;
+}
+h1{
+  color: #004739;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+div.transbox{
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  width: 65%;
+  background-color: #ffffff;
+  z-index: -1;
+  border: 1px solid black;
+  opacity:0.9;
+  filter:alpha(opacity=40); 
+}
+div.transbox p{
+  margin: 5%;
+  z-index: -1;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+body{
+    color: #002966;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 300px;
+}
+div.maps{
+    height: 300px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button{
+ text-decoration:none; text-align:center; 
+ padding:10px 30px; 
+ border:none;
+  
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+ opacity:0.94; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=94); 
+ filter: alpha(opacity=94); 
+  }.button:hover{
+ padding:12px 34px; 
+ border:none; 
+ 
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 3px 7px #04626b;  -moz-box-shadow: 0px 3px 7px #04626b;  box-shadow:0px 3px 7px #04626b;  
+ opacity:0.85; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
+ filter: alpha(opacity=85); 
+ }.button:active{
+ padding:12px 34px; 
+ border:none; 
+ 
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+ opacity:0.94; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=94); 
+ filter: alpha(opacity=94); 
+}
+td { 
+    padding: 20px;
+    font-size: 17px;
+    width: 600px;
+}
+th {
+    padding: 10px;
+    tetx-align: center;
+    font-size: 20px;
+}
+.back-to-top {
+			position: fixed;
+			bottom: 2em;
+			left: 20px;
+			text-decoration: none;
+			color: #C1CACA;
+			background-color: rgba(47, 79, 79, 0.8);
+			font-size: 17px;
+			padding: 1em;
+			display: none;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVlCUFHTPW_1WwBzOwoI8LJpH5AnVUtyE"></script>
+    <script>
+function initialize() {
+  var TimeSquare = new google.maps.LatLng(40.760262, -73.993287);
+  var TimeSquareOpt = {
+    zoom: 15,
+    center: TimeSquare
+  }
+  var map1 = new google.maps.Map(document.getElementById('TimeSquare'), TimeSquareOpt);
+
+  var marker1 = new google.maps.Marker({
+      position: TimeSquare,
+      map: map1,
+  });
+
+
+var CentralPark = new google.maps.LatLng(40.712784, -74.005941);
+  var CentralParkOpt = {
+    zoom: 15,
+    center: CentralPark
+  }
+  var map2 = new google.maps.Map(document.getElementById('CentralPark'), CentralParkOpt);
+
+  var marker2 = new google.maps.Marker({
+      position: CentralPark,
+      map: map2,
+  });
+
+var Coney = new google.maps.LatLng(40.575329, -73.979783);
+  var ConeyOpt = {
+    zoom: 15,
+    center: Coney
+  }
+  var map3 = new google.maps.Map(document.getElementById('Coney'), ConeyOpt);
+
+  var marker3 = new google.maps.Marker({
+      position: Coney,
+      map: map3,
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="Destinations.html">I &hearts; NY </a>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" target="_blank">Check the weather &#9730;</a></li>
+        <li><a href="http://web.mta.info/maps/submap.html" target="_blank">Subway</a></li>
+        <li><a href="http://newyork.seriouseats.com" target="_blank">Food</a></li>
+        <li><a href="TopHotels.html" target="_blank">Top 3 Hotels</a></li>
+        <li><a href="TopTourists.html" target="_blank">Top 3 Attractions</a></li> 
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</head>
+
+<body>
+<center>
+<div class="transbox">
+<br><br><br>
+<h1>Editor's Choice of Top Three Attractions</h1><br>
+<table cellpadding="10px">
+<tr><th><center><a href="http://www.timessquarenyc.org/index.aspx" target="_blank"><h2>Times Square</h2></a>
+<img src="http://www.impresamia.com/wp-content/uploads/2015/02/New-York-City.jpeg"></center></th>
+<td>&emsp;With massive digital billboards whose bright lights make midnight look like midafternoon; star-studded Broadway and Off-Broadway shows; people peddling art and jewelry on the street; and, of course, the Naked Cowboy who plays guitar in his tighty-whities, the expansive stretch of Midtown is a feast for all five senses. Visitors can shop in flagship locations of such stores as Toys "R" Us, take pictures with wax celebrities at Madame Tussauds, watch the ball drop on New Year's Eve or grab a pre- or post-theater meal along Restaurant Row (West 46th Street, between Eighth and Ninth Avenues), where many eateries offer prix-fixe deals. And with Broadway closed to cars from West 42nd to West 47th Streets, Times Square is now more pedestrian friendly than ever.</td></tr>
+
+<tr><td colspan="2"><div class="maps" id="TimeSquare"></div></td></tr>
+<tr><td colspan="2"><hr></td></tr>
+<tr><th><center><a href="http://www.centralparknyc.org/" target="_blank"><h2>Central Park</h2></a>
+<img src="http://cdn2.getyourguide.com/img/tour_img-41269-48.jpg">
+</center></th>
+
+<td>&emsp;Spanning 843 acres in the heart of Manhattan, Central Park is one of the world's greatest urban oases, encompassing a diverse landscape of rolling fields, walking trails and tranquil bodies of water. Among its attractions are the Central Park Zoo, Belvedere Castle and the Friedsam Memorial Carousel. Sheep Meadow and the Great Lawn offer sprawling expanses where visitors can relax and enjoy the outdoors. In the winter, there's ice-skating at Trump Rink and at a second Trump-run skating spot, Lasker Rink, in a quiet section at the northern edge of the park. In the summer, the Delacorte Theater hosts Shakespeare in the Park, outdoor performances of the Bard's work. Elsewhere, Rumsey Playfield serves as the primary home for SummerStage, a citywide (mostly) free performing-arts festival featuring music, dance, theater and more. </td></tr>
+
+<tr><td colspan="2"><div class="maps" id="CentralPark"></div></td></tr>
+<tr><td colspan="2"><hr></td></tr>
+<tr><th><center><a href="http://www.coneyisland.com/tourist-information" target="_blank"><h2>Coney Island</h2></a><img src="http://2.bp.blogspot.com/-zBoFscWZOqk/Ui55FZHKQ_I/AAAAAAAAGYo/Cd2aR7NC3wE/s1600/MIN+175+Coney+Island.png">
+</center></th>
+<td>&emsp;The ups and downs of the nearly 90-year-old Cyclone roller coaster are a fitting metaphor for the Coney Island experience lately—every year seems to bring big changes to the quirky beachfront amusement district, but a visit there is always entertaining. The latest addition is the Thunderbolt, a new coaster named after a ride that was shut down back in 1982. These days, classic Boardwalk institutions like Ruby's Bar and Grill, Deno's Wonder Wheel Amusement Park and Nathan's Famous operate next to shiny thrill-ride tract Luna Park, whose Scream Zone twists, turns, drops and spins patrons into a state of pure bliss. Other area attractions include MCU Park, the gorgeous home of Mets minor-league affiliate the Brooklyn Cyclones, and the New York Aquarium, which features a menagerie of aquatic life including walruses, penguins and cownose rays. </td></tr>
+
+<tr><td colspan="2"><div class="maps" id="Coney"></div></td></tr>
+</table><br>
+</center>
+</div>
+<a href="#" class="back-to-top"> Back to Top </a>
+<script>
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
+<br><br>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="Destinations.html"> Back </a>
+  </div>
+</div>
+</body>
