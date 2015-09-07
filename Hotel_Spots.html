@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<style>
+body {
+background-image:url('https://kongresguides.files.wordpress.com/2013/05/hotel-amfora-cascading-pool.jpg');
+background-size: cover;
+-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;	
+    margin: 0;
+    padding: 0;
+}
+h1{
+  color: #004739;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+div.transbox{
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  width: 60%;
+  background-color: #ffffff;
+  z-index: -1;
+  border: 1px solid black;
+  opacity:0.7;
+  filter:alpha(opacity=40); 
+}
+div.transbox p{
+  margin: 5%;
+  z-index: -1;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+body{
+    color: #000066;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 20%;
+    width: 100%;
+}
+.button{
+ text-decoration:none; text-align:center; 
+ padding:10px 30px; 
+ border:none;
+  
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+ opacity:0.94; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=94); 
+ filter: alpha(opacity=94); 
+  }.button:hover{
+ padding:12px 34px; 
+ border:none; 
+ 
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 3px 7px #04626b;  -moz-box-shadow: 0px 3px 7px #04626b;  box-shadow:0px 3px 7px #04626b;  
+ opacity:0.85; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
+ filter: alpha(opacity=85); 
+ }.button:active{
+ padding:12px 34px; 
+ border:none; 
+ 
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+ opacity:0.94; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=94); 
+ filter: alpha(opacity=94); 
+}
+td { 
+    padding: 7px;
+    font-size: 17px;
+}
+th {
+    tetx-align: center;
+    font-size: 20px;
+}
+
+</style>
+<script>
+function showDiv(objectID) {
+var theElementStyle = document.getElementById(objectID);
+
+if(theElementStyle.style.display == "none")
+{
+theElementStyle.style.display = "block";
+}
+else
+{
+theElementStyle.style.display = "none";
+}
+}
+</script>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="Destinations.html">I &hearts; NY </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" target="_blank">Check the weather &#9730;</a></li>
+        <li><a href="http://web.mta.info/maps/submap.html" target="_blank">Subway</a></li>
+        <li><a href="http://newyork.seriouseats.com" target="_blank">Food</a></li>
+        <li><a href="TopHotels.html" target="_blank">Top 3 Hotels</a></li>
+        <li><a href="TopTourists.html" target="_blank">Top 3 Attractions</a></li> 
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  </head>
+  <form method="get" action="Hotel_Spots.py">
+
+  <body>
+  <center>
+  <br>
+      <div class="transbox"><table border="0">
+      <h1> New York Hotel Finder </h1>
+<hr><br><br>
+	<table border='0' cellpadding='6px'>
+	<tr><th>Region</th>
+	<td><select name='Region' size='1'>
+		<option>Capital-Saratoga</option>
+		<option>Chautauqua-Allegheny</option>
+		<option>Finger Lakes</option>
+		<option>New York City</option>
+		<option>Central New York</option>
+		<option>Adirondacks</option>
+		<option>Hudson Valley</option>
+		<option>Catskills</option>
+		<option>Greater Niagara</option>
+		<option>1000 Islands-Seaway</option>
+		<option>Long Island</option></td></tr>
+	<tr><th>County</th>
+	<td><select name='County' size='1'>
+		<option value='RensselaerCounty'> Capital Saratoga: Rensselaer County</option>        
+        <option value='SaratogaCounty'> Capital Saratoga: Saratoga County</option>
+        <option value='SchenectadyCounty'> Capital Saratoga: Schenectady County</option>
+	<option value='FultonCounty'> Captial-Saratoga: Fulton County</option>
+	<option value="AlbanyCounty"> Capital Saratoga: Albany County</option>
+        <option value='CattaraugusCounty'> Chautauqua-Allegheny: Cattaraugus County</option>
+        <option value='ChautauquaCounty'> Chautauqua-Allegheny: Chautauqua County</option>
+	<option value="AlleganyCounty"> Chautauqua-Allegany: Allegany County</option>
+	<option value=“Attica-WyomingCounty”> Greater Niagara: Attica - Wyoming County</option>
+        <option value='ErieCounty'> Greater Niagara: Erie County</option>
+        <option value='WyomingCounty'> Greater Niagara: Wyoming County</option>
+        <option value='NiagaraCounty'> Greater Niagara: Niagara County</option>
+        <option value='OrleansCounty'> Greater Niagara: Orleans County</option>
+        <option value='GeneseeCounty'> Greater Niagara: Genesee County</option>
+        <option value='Brewerton-OnondagaCounty'> Finger Lakes: Brewerton - Onondaga County</option>
+        <option value='LivingstonCounty'> Finger Lakes: Livingston County</option>
+        <option value='SchuylerCounty'> Finger Lakes: Schuyler County</option>
+        <option value='YatesCounty'> Finger Lakes: Yates County</option>
+        <option value='WayneCounty'> Finger Lakes: Wayne County</option>
+        <option value='OntarioCounty'> Finger Lakes: Ontario County</option>
+        <option value='CayugaCounty'> Finger Lakes: Cayuga County</option>
+        <option value='SenecaCounty'> Finger Lakes: Seneca County</option>
+        <option value='SteubenCounty'> Finger Lakes: Steuben County</option>
+        <option value='TiogaCounty'> Finger Lakes: Tioga County</option>
+        <option value='TompkinsCounty'> Finger Lakes: Tompkins County</option>
+        <option value='CortlandCounty'> Finger Lakes: Cortland County</option>
+	<option value='NewYorkCounty'> New York County</option>
+        <option value=“BronxCounty”> New York City: Bronx County</option>
+        <option value='QueensCounty'> New York City: Queens County</option>
+        <option value='Brooklyn'> New York City: Brooklyn</option>
+        <option value='SchoharieCounty'> Central New York: Schoharie County</option>
+        <option value='MadisonCounty'> Central New York: Madison County</option>
+        <option value='MonroeCounty'> Central New York: Monroe County</option>
+        <option value='BroomeCounty'> Central New York: Broome County</option>
+        <option value='HerkimerCounty-Cen.Leath.'> Central New York: Herkimer County-Cen. Leath.</option>
+        <option value='ChenangoCounty'> Central New York: Chenango County</option>
+        <option value='FranklinCounty'> Adirondacks: Franklin County</option>
+        <option value='OnondagaCounty'> Adirondacks: Onondaga County</option>
+        <option value='HamiltonCounty'> Adirondacks: Hamilton County</option>
+        <option value='WarrenCounty'> Adirondacks: Warren County</option>
+        <option value='LewisCounty'> Adirondacks: Lewis County</option>
+        <option value='EssexCounty'> Adirondacks: Essex County</option>
+        <option value='ClintonCounty'> Adirondacks: Clinton County</option>
+        <option value='ColumbiaCounty'> Hudson Valley: Columbia County</option>
+	<option value='OtsegoCounty'> Catskills: Otsego County</option>
+        <option value='UlsterCounty-Catskills'> Catskills|Hudson Valley: Ulster County-Catskills</option>
+        <option value='SullivanCounty'> Catskills: Sullivan County</option>
+	<option value='GreeneCounty'> Catskills: Greene County</option>
+        <option value='DelawareCounty'> Catskills: Delaware County</option>
+        <option value='PutnamCounty'> Hudson Valley: Putnam County</option>
+        <option value='RocklandCounty'> Hudson Valley: Rockland County</option>
+        <option value='WestchesterCounty'> Hudson Valley: Westchester County</option>
+        <option value='OrangeCounty'> Hudson Valley: Orange County</option>
+        <option value='DutchessCounty'> Hudson Valley: Dutchess County</option>
+        <option value='OswegoCounty'> 1000 Islands-Seaway: Oswego County</option>
+        <option value='JeffersonCounty'> 1000 Islands-Seaway: Jefferson County</option>
+        <option value='OneidaCounty'> 1000 Islands-Seaway: Oneida County </option>
+        <option value='NassauCounty'> Long Island: Nassau County</option>
+        <option value='St.LawrenceCounty-TI'> 1000 Islands-Seaway: St. Lawrence County - TI</option>
+        <option value='SuffolkCounty'> Long Island: Suffolk County</option></td></tr>
+	<tr><th>Categories</th>
+	<td><select name='tag' size='1'>
+		<option>Hotels & Motels</option>
+		<option>Convention Centers</option>
+		<option>Country Inns</option>
+		<option>Camp</option>
+		<option>Vacation Rentals</option>
+		<option>Cottages</option>
+		<option>Privately-owned</option>
+		<option>Nature</option>
+		<option>Animal</option></td></tr>
+	</table><br>
+
+	<h4><b><input type='submit' value="Find Hotel Spots"></b></h4>
+<br><br>
+<a href="#"  onClick="showDiv('map')";return false;> <h4>Don't know your Region or County? </h4></a><br>
+<div id='map' style="display: none"><img src="http://newyorkrevolution.org/wp-content/uploads/2013/10/NYR-Counties-medium.png" style="width:550px;height:450px">
+</div><br>
+
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="Destinations.html"> Back </a>
+  </div>
+</div>
+
+<br><br><br>
+</body>
+</html>
