@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<title> Top Hotel Spots </title>
+<style>
+body {
+background-image:url('tophotelpicture.jpg');
+background-repeat: repeat-y;
+    margin: 0;
+    padding: 0;
+}
+h1{
+  color: #004739;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+div.transbox{
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  width: 65%;
+  background-color: #ffffff;
+  z-index: -1;
+  border: 1px solid black;
+  opacity:0.9;
+  filter:alpha(opacity=40); 
+}
+div.transbox p{
+  margin: 5%;
+  z-index: -1;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+body{
+    color: #002966;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 350px;
+}
+div.maps{
+    height: 300px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button{
+ text-decoration:none; text-align:center; 
+ padding:10px 30px; 
+ border:none;
+  
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+ opacity:0.94; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=94); 
+ filter: alpha(opacity=94); 
+  }.button:hover{
+ padding:12px 34px; 
+ border:none; 
+ 
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 3px 7px #04626b;  -moz-box-shadow: 0px 3px 7px #04626b;  box-shadow:0px 3px 7px #04626b;  
+ opacity:0.85; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
+ filter: alpha(opacity=85); 
+ }.button:active{
+ padding:12px 34px; 
+ border:none; 
+ 
+ font:18px 'Oswald', sans-serif;
+ color:#E5FFFF; 
+ background-color:#3BA4C7; 
+ background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%); 
+ background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 ); 
+ background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);   
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+ opacity:0.94; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=94); 
+ filter: alpha(opacity=94); 
+}
+td { 
+    padding: 20px;
+    font-size: 17px;
+    width: 600px;
+}
+th {
+    padding: 10px;
+    tetx-align: center;
+    font-size: 20px;
+}
+.back-to-top {
+			position: fixed;
+			bottom: 2em;
+			left: 20px;
+			text-decoration: none;
+			color: #C1CACA;
+			background-color: rgba(47, 79, 79, 0.8);
+			font-size: 17px;
+			padding: 1em;
+			display: none;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVlCUFHTPW_1WwBzOwoI8LJpH5AnVUtyE"></script>
+    <script>
+function initialize() {
+  var ThePlaza = new google.maps.LatLng(40.764700, -73.974600);
+  var ThePlazaOpt = {
+    zoom: 15,
+    center: ThePlaza
+  }
+  var map1 = new google.maps.Map(document.getElementById('Plaza'), ThePlazaOpt);
+
+  var marker1 = new google.maps.Marker({
+      position: ThePlaza,
+      map: map1,
+  });
+
+
+var Oriental = new google.maps.LatLng(40.767932, -73.982449);
+  var OrientalOpt = {
+    zoom: 15,
+    center: Oriental
+  }
+  var map2 = new google.maps.Map(document.getElementById('Oriental'), OrientalOpt);
+
+  var marker2 = new google.maps.Marker({
+      position: Oriental,
+      map: map2,
+  });
+
+var Greenwich = new google.maps.LatLng(40.719846, -74.009854);
+  var GreenwichOpt = {
+    zoom: 15,
+    center: Greenwich
+  }
+  var map3 = new google.maps.Map(document.getElementById('Greenwich'), GreenwichOpt);
+
+  var marker3 = new google.maps.Marker({
+      position: Greenwich,
+      map: map3,
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="Destinations.html">I &hearts; NY </a>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" target="_blank">Check the weather &#9730;</a></li>
+        <li><a href="http://web.mta.info/maps/submap.html" target="_blank">Subway</a></li>
+        <li><a href="http://newyork.seriouseats.com" target="_blank">Food</a></li>
+        <li><a href="TopHotels.html" target="_blank">Top 3 Hotels</a></li>
+        <li><a href="TopTourists.html" target="_blank">Top 3 Attractions</a></li> 
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</head>
+
+<body>
+<center>
+<div class="transbox">
+<br><br><br>
+<h1>Editor's Choice of Top Three Hotels</h1>
+<table cellpadding="10px">
+<tr><th><center><a href="http://www.theplazany.com/" target="_blank"><h2>The Plaza</h2></a><img src="http://www.theplazany.com//images/hotel/roomssuites/PLZ-234.jpg"></center></th>
+<td>&emsp;It could be said that no other New York hotel is as synonymous with luxury as the century-old Plaza, which received a $400 million renovation in 2008. Among the highlights -- a Rolls Royce to take you around town, a 24-hour concierge, 24-hour room service, and your own hallway butler on 24-hour call.</td></tr>
+
+<tr><td colspan="2"><div class="maps" id="Plaza"></div></td></tr>
+<tr><td colspan="2"><hr></td></tr>
+<tr><th><center><a href="http://www.mandarinoriental.com/newyork/" target="_blank"><h2>Mandarin Oriental</h2></a><img src="http://photos.mandarinoriental.com/is/image/MandarinOriental/new-york-suite-the-taipan-suite?$GalleryLandscape$"></center></th>
+<td>&emsp;In the same building as some of the city's best restaurants, and across the street from Central Park, the Mandarin's location is ideal. But it's the hotel's dizzying array of modern luxuries -- a 75-foot pool, one of the city's best spas, sweeping views from nearly every common area, and huge bathrooms with deep soaking tubs (even in standard rooms) -- that make this a true standout among the stars.</td></tr>
+
+<tr><td colspan="2"><div class="maps" id="Oriental"></div></td></tr>
+<tr><td colspan="2"><hr></td></tr>
+<tr><th><center><a href="http://www.thegreenwichhotel.com/" target="_blank"><h2>The Greenwich Hotel</h2></a><img src="http://www.thegreenwichhotel.com/cms/wp-content/uploads/2013/04/greenwich-drawing03.jpg"></center></th>
+<td>&emsp;This virtually flawless 88-room TriBeCa newcomer (opened in 2008 by Robert de Niro, among others) offers large, homey rooms, breathtaking design, and very attentive service. Even better: free Wi-Fi; free minibar snacks; and free Wii video games by request. Better still: an underground pool; a standout Japanese spa; a premier gym; and the new Locanda Verde restaurant.</td></tr>
+
+<tr><td colspan="2"><div class="maps" id="Greenwich"></div></td></tr>
+</table>
+</center>
+</div>
+<a href="#" class="back-to-top"> Back to Top </a>
+<script>
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
+<br><br>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="Destinations.html"> Back </a> 
+  </div>
+</div>
+</body>
