@@ -1,8 +1,8 @@
 NY Tourist Destinations
 =======================
-Jiaqi Gao and Yuki Chen
+> Intro to Comp Sci Final Project
 
-# Intro to Comp Sci II Final Project
+Created by Jiaqi Gao and Yuki Chen
 
 Discover tourist destinations and hotels in New York to plan your next visit. Utilizing NY Open Data, narrow your search for places to visit by regional location and interest. 
 
