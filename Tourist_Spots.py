@@ -284,7 +284,7 @@ def SortData(which_region, which_county,which_tag):
 
     #in case no places satisfy requirements
     result= ''
-    maps='''<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVlCUFHTPW_1WwBzOwoI8LJpH5AnVUtyE"></script>'''
+    maps='''<script src="https://maps.googleapis.com/maps/api/js?key={YOUR KEY HERE}"></script>'''
     if len(regions)<1:
         result+= '<tr><th>Oops, no tourist spots satisfy your requirement.</th></tr>'
     else:
